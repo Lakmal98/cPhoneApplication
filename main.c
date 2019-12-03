@@ -70,7 +70,7 @@ void switchCaseContactMenu(){
     scanf(" %c",&menu);
     switch(menu){
         case 'a':
-            printf("this is for add contact\n");
+            addContact();
             break;
         case 'b':
             printf("this is for update contact\n");
@@ -120,5 +120,10 @@ void switchCaseSMSMenu(){
             switchCaseContactMenu();
 
     }
+}
+
+
+void addContact(){
+    printf("Add contact \n");
 }
 
