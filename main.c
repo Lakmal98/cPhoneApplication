@@ -1,23 +1,9 @@
 #include <stdio.h>
-int menu = 0;
+
 int main(){
 
     mainMenu();
-    scanf("%d",&menu);
-    switch(menu){
-        case 1:
-            contactMenu();
-            break;
-        case 2:
-            smsMenu();
-            break;
-        case 3:
-            printf("Bye");
-            break;
-            exit(0);
-        default:
-            printf("Wrong input");
-    }
+    switchCaseMainMenu();
 
     return 0;
 
@@ -55,5 +41,38 @@ void smsMenu(){
 
 //Sub menu functions end
 
+void switchCaseMainMenu(){
+    int menu = 0;
+    scanf("%d",&menu);
+    switch(menu){
+        case 1:
+            contactMenu();
+            switchCaseContactMenu();
+            break;
+        case 2:
+            smsMenu();
+            break;
+        case 3:
+            printf("Bye");
+            break;
+            exit(0);
+        default:
+            printf("Wrong input");
+    }
+}
 
+void switchCaseContactMenu(){
+    char menu;
+    printf("Enter key for contacts menu\n");
+    scanf(" %c",&menu);
+    switch(menu){
+        case 'a':
+            printf("A");
+            break;
+        default:
+            printf("Default");
+    }
+
+
+}
 
